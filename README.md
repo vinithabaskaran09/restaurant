@@ -1,2 +1,2 @@
-# restaurant.py
+# restaurant
 prepcourse project
