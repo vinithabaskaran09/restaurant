@@ -32,7 +32,6 @@ def pass_code():
             print(f"sorry!!!! you have only {count} tries...good luck".title())
             if count == 0:
                 break
-         
 
 """This function is used to get the order from user on different cuisine"""
 
