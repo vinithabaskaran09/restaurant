@@ -24,14 +24,15 @@ def pass_code():
         password = input('>')
         if password == default_password:
             # print(f"Hello chef")
-            file = open("/Users/vinitha/Desktop/project/stock_items.txt","r")
-            print(file.readline())
+            file = open("./stock_items.txt","r")
+            print(file.read())
             break
         else:
             count = count - 1
             print(f"sorry!!!! you have only {count} tries...good luck".title())
             if count == 0:
                 break
+         
 
 """This function is used to get the order from user on different cuisine"""
 
@@ -115,19 +116,21 @@ def complete_order():
     if user_decision == "y":
         get_order()
     else:
-        print("complete_order")
+        #print("complete_order")
         final_order = completed_order
         # for order in final_order:
         #     print(f"These are the final items: {order}")
-        print(final_order)
+        #print(final_order)
         print("Your order will be ready in 5 mins!!!Do you like to play a game?Y?N")
         game_desicion = input()
         if game_desicion == "y":
+            print(f"This is your confirmed order.{completed_order}")
+
             game()
         else:
-            print("This is your confirmed order.")
-            for order in completed_order:
-                print(f"your final order list is : {order}")
+            print(f"This is your confirmed order.{completed_order}")
+            # for order in completed_order:
+            #     print(f"your final order list is : {order}")
 
 """playing game during the wait-time"""
 def game():
